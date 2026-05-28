@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="it" style=""><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .glass-card {
+            backdrop-filter: blur(16px);
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .instrument-serif {
+            font-family: 'Playfair Display', serif;
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-secondary-fixed-variant": "#004c69",
+                      "error-container": "#93000a",
+                      "on-error-container": "#ffdad6",
+                      "on-background": "#d4e4fa",
+                      "tertiary-fixed-dim": "#c4c7c9",
+                      "secondary-fixed": "#c4e7ff",
+                      "text-on-dark": "#FFFFFF",
+                      "surface-container": "#122131",
+                      "inverse-on-surface": "#233143",
+                      "surface-dim": "#051424",
+                      "on-error": "#690005",
+                      "inverse-surface": "#d4e4fa",
+                      "on-primary-container": "#798098",
+                      "tertiary-fixed": "#e0e3e5",
+                      "outline": "#909097",
+                      "outline-variant": "#45464d",
+                      "surface-bright": "#2c3a4c",
+                      "background": "#051424",
+                      "on-primary-fixed-variant": "#3f465c",
+                      "surface-container-lowest": "#010f1f",
+                      "secondary": "#7bd0ff",
+                      "surface-container-highest": "#273647",
+                      "surface-dark": "#1E293B",
+                      "surface-container-low": "#0d1c2d",
+                      "primary-fixed": "#dae2fd",
+                      "primary-container": "#0f172a",
+                      "primary-fixed-dim": "#bec6e0",
+                      "on-secondary": "#00354a",
+                      "surface-variant": "#273647",
+                      "secondary-container": "#00a6e0",
+                      "text-on-light": "#0F172A",
+                      "error": "#ffb4ab",
+                      "surface-tint": "#bec6e0",
+                      "on-tertiary-fixed": "#191c1e",
+                      "tertiary": "#c4c7c9",
+                      "on-primary-fixed": "#131b2e",
+                      "on-primary": "#283044",
+                      "tertiary-container": "#15181a",
+                      "secondary-fixed-dim": "#7bd0ff",
+                      "on-tertiary": "#2d3133",
+                      "on-secondary-fixed": "#001e2c",
+                      "surface": "#051424",
+                      "on-surface": "#d4e4fa",
+                      "on-tertiary-fixed-variant": "#444749",
+                      "on-surface-variant": "#c6c6cd",
+                      "border-glass": "rgba(255, 255, 255, 0.1)",
+                      "on-secondary-container": "#00374d",
+                      "primary": "#bec6e0",
+                      "inverse-primary": "#565e74",
+                      "surface-container-high": "#1c2b3c",
+                      "on-tertiary-container": "#7e8183"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-padding-lg": "120px",
+                      "container-max": "1280px",
+                      "section-padding-md": "64px",
+                      "unit": "8px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "display-hero": ["Playfair Display"],
+                      "headline-md": ["Playfair Display"],
+                      "label-caps": ["Inter"],
+                      "headline-lg": ["Playfair Display"],
+                      "body-lg": ["Inter"],
+                      "body-md": ["Inter"],
+                      "technical-stat": ["Inter"]
+              },
+              "fontSize": {
+                      "display-hero": ["72px", {"lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                      "headline-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "label-caps": ["12px", {"lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                      "headline-lg": ["48px", {"lineHeight": "1.2", "fontWeight": "600"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "technical-stat": ["40px", {"lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700"}]
+              }
+            }
+          }
+        }
+    </script>
+</head>
+<body class="bg-background text-on-surface">
+<!-- TopNavBar -->
+<header class="sticky top-0 w-full z-50 bg-background/80 backdrop-blur-md border-b border-white/10 shadow-sm">
+<nav class="flex justify-between items-center h-20 px-8 max-w-[1280px] mx-auto">
+<div class="font-headline-md text-headline-md font-bold tracking-tight text-on-surface">Ciemme Impianti</div>
+<div class="hidden md:flex gap-8">
+<a class="font-label-caps text-label-caps text-primary font-bold border-b-2 border-primary pb-1" href="#"></a>
+<a class="font-label-caps text-label-caps text-on-surface-variant font-medium hover:text-secondary-fixed transition-colors duration-200" href="index.html">Home<br/></a>
+</div>
+<button class="bg-primary-fixed text-on-primary-fixed px-6 py-2 rounded-lg font-label-caps text-label-caps font-bold active:scale-95 transition-transform duration-150">Request Quote</button>
+</nav>
+</header>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex flex-col justify-center items-center px-8 text-center bg-[#0F172A] overflow-hidden">
+<div class="absolute inset-0 opacity-20">
+<img alt="Industrial facility at dusk" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIn_QW_WbJjym75Drh6t7tJbawgzz0iYZ03Sbxof7dOnF3feoS-rTCOufu4IxGEC1LeH-DtDFXJ_mfi4rw0ZGiCpjouoy-8dOtDWIgjzOAgmcNF1hoTXDEP_FBCzJ1MXCQuFdB-jb7gqQPS-QCw9qPxJbMHILIgp9KRGh00IxTrWH6s_jmZ8gx0-z3DJKOHznyZ-JTr6r0oHbpBjBe8HFNAp4GN2oxMB_4-95wVNOudD59oVpj11_FbcehE6HNLI9CqEPB4gc4uKE"/>
+</div>
+<div class="relative z-10 max-w-4xl">
+<h1 class="font-display-hero text-display-hero text-text-on-dark mb-6 instrument-serif">Impianti idraulici industriali: Specializzazione e innovazione</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl mx-auto mb-10">Progettiamo, realizziamo ed installiamo impianti di riscaldamento, condizionamento, trattamento acque, gas-metano, aria compressa, antincendio e tubazioni inox mantenendo il miglior stato di affidabilità richiesto dal mercato.</p>
+<div class="flex gap-4 justify-center">
+</div>
+</div>
+</section>
+<!-- PCTO Phases -->
+<section class="py-section-padding-lg px-8 max-w-[1280px] mx-auto">
+<div class="mb-16">
+<span class="font-label-caps text-label-caps text-secondary mb-4 block">PROCESS WORKFLOW</span>
+<h2 class="font-headline-lg text-headline-lg text-on-surface">Qualità e Affidabilità Certificata</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<!-- Card 01 -->
+<div class="glass-card p-8 flex flex-col h-full rounded-xl transition-transform hover:-translate-y-2">
+<div class="mb-8">
+<span class="font-display-hero text-[48px] text-primary/30 instrument-serif">01.</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-2">Qualità</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">La ricerca dei migliori standard qualitativi sono il nostro costante impegno, per fornire impianti di altissima precisione.</p>
+<div class="mt-auto flex items-center text-secondary font-label-caps text-label-caps gap-2"><span class="material-symbols-outlined text-[18px]">verified</span> STANDARD QUALITATIVI</div>
+</div>
+<!-- Card 02 -->
+<div class="glass-card p-8 flex flex-col h-full rounded-xl transition-transform hover:-translate-y-2">
+<div class="mb-8">
+<span class="font-display-hero text-[48px] text-primary/30 instrument-serif">02.</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-2">Affidabilità</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Gli impianti sono tutti certificati e garantiti secondo le normative di settore, oggi indispensabili per la sicurezza.</p>
+<div class="mt-auto flex items-center text-secondary font-label-caps text-label-caps gap-2"><span class="material-symbols-outlined text-[18px]">gavel</span> NORME E CERTIFICAZIONI</div>
+</div>
+<!-- Card 03 -->
+<div class="glass-card p-8 flex flex-col h-full rounded-xl transition-transform hover:-translate-y-2">
+<div class="mb-8">
+<span class="font-display-hero text-[48px] text-primary/30 instrument-serif">03.</span>
+<h3 class="font-headline-md text-headline-md text-on-surface mt-2">All-in-One</h3>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mb-6">Progettiamo, realizziamo ed installiamo i nostri impianti rispondendo con completezza alle richieste dei clienti.</p>
+<div class="mt-auto flex items-center text-secondary font-label-caps text-label-caps gap-2"><span class="material-symbols-outlined text-[18px]">settings_suggest</span> SERVIZIO COMPLETO</div>
+</div>
+</div>
+</section>
+<!-- Technical Highlights -->
+<section class="py-section-padding-lg bg-surface-container-lowest border-y border-white/5">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-12 items-center">
+<div class="text-center p-8 border-r border-outline-variant/30 last:border-0">
+</div>
+</div>
+</div>
+</section>
+<!-- The Diary (Light Mode Transition) -->
+<section class="bg-[#F8FAFC] py-section-padding-lg text-text-on-light">
+<div class="max-w-[1280px] mx-auto px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline-lg text-headline-lg text-[#0F172A]">Il diario</h2>
+</div>
+</div>
+<!-- Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<!-- Phase 1: Days 01-04 -->
+<div class="lg:col-span-3 group bg-white p-8 rounded-xl border border-[#E2E8F0] hover:shadow-xl transition-all duration-300 flex flex-col md:flex-row gap-8">
+<div class="flex-1 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps px-2 py-1 bg-[#F1F5F9] rounded text-[#64748B]">PHASE 1: DAYS 01-04</span>
+<span class="material-symbols-outlined text-[#64748B]">precision_manufacturing</span>
+</div>
+<h4 class="font-headline-md text-[28px] text-[#1E293B] mb-6">ARCHIVIAZIONE  e GESTIONE DOCUMENTI</h4>
+<div class="space-y-6 flex-grow">
+<div>
+<h5 class="font-label-caps font-bold text-[#1E293B] mb-1"><span class="" style="font-weight: normal;">Ho dedicato i primi quattro giorni ad attività di back-office. Mi sono occupato dell'organizzazione e del riordino dei faldoni cartacei all'interno dell'archivio aziendale e ho gestito la riproduzione documentale, effettuando le fotocopie delle fatture commerciali.</span></h5>
+</div>
+<div>
+</div>
+<div>
+</div>
+<div>
+</div>
+</div>
+</div>
+<div class="flex-1 w-full min-h-[300px] rounded-lg overflow-hidden ">
+<img alt="Archiviazione e Gestione Documenti" class="w-full h-full object-cover" src="documenti.jfif"/>
+</div>
+</div>
+<!-- Day 05 -->
+<div class="group bg-white p-6 rounded-xl border border-[#E2E8F0] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps px-2 py-1 bg-[#F1F5F9] rounded text-[#64748B]">DAY 05</span>
+<span class="material-symbols-outlined text-[#64748B]">thermostat</span>
+</div>
+<h4 class="font-headline-md text-[22px] text-[#1E293B] mb-3">SICUREZZA dei DATI</h4>
+<p class="font-body-md text-body-md text-[#475569] mb-6 flex-grow">Durante la quinta giornata ho lavorato sulla protezione dei dati aziendali, occupandomi della distruzione sicura di documenti sensibili e riservati non più necessari.</p>
+<div class="w-full h-40 rounded-lg bg-[#F1F5F9] flex items-center justify-center text-[#94A3B8]"><img alt="Professional personnel management representation" class="w-full h-full object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdQFxptCOJ2KcJWZgUgX3Y3JQ-qhKCWnMA7NFcHkc2jvj-XBr_ACENsLK2mqII2NPuI4jyWqNA3EV_y63LaAG1Uz9vCgyma5cnZcPIP7D2xRwqDAn1OK1MsPtRrST9MUZLlElgvnyf7ndIqyO-R6k3gACic6z1mBLFlltkmlgwlFiBOFDePugndTDG-KcYTx3gRkIb0Fb_NX3jcFxRyTnPjy7PaXjEW8k_PPB9brHDjo7qSteYETNoLvZS6Oa6EBCQzk8HBxs1ZYI"/></div>
+</div>
+<!-- Day 06 -->
+<div class="group bg-white p-6 rounded-xl border border-[#E2E8F0] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps px-2 py-1 bg-[#F1F5F9] rounded text-[#64748B]">DAY 06</span>
+<span class="material-symbols-outlined text-[#64748B]">account_tree</span>
+</div>
+<h4 class="font-headline-md text-[22px] text-[#1E293B] mb-3">Gestione Risorse Umane</h4>
+<p class="font-body-md text-body-md text-[#475569] mb-6 flex-grow">Ho gestito la documentazione del personale, controllando e sistemando in ordine tutti i certificati professionali e di sicurezza degli operai dell'azienda.</p>
+<div class="w-full h-40 rounded-lg bg-[#F1F5F9] flex items-center justify-center text-[#94A3B8]">
+<img alt="Gestione Risorse Umane" class="w-full h-full object-cover rounded-lg" src="risorse_umane.png"/>
+</div>
+</div>
+<!-- Day 07 -->
+<div class="group bg-white p-6 rounded-xl border border-[#E2E8F0] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps px-2 py-1 bg-[#F1F5F9] rounded text-[#64748B]">DAY 07</span>
+<span class="material-symbols-outlined text-[#64748B]">bolt</span>
+</div>
+<h4 class="font-headline-md text-[22px] text-[#1E293B] mb-3">Supporto d'Ufficio e Sicurezza</h4>
+<p class="font-body-md text-body-md text-[#475569] mb-6 flex-grow">Ho svolto un'attività combinata: da un lato ho continuato lo smaltimento sicuro dei documenti d'ufficio riservati, dall'altro ho completato l'organizzazione e l'archiviazione dei certificati degli operai.</p>
+<div class="w-full h-40 rounded-lg bg-[#F1F5F9] flex items-center justify-center text-[#94A3B8]">
+<img alt="Supporto d'Ufficio e Sicurezza" class="w-full h-full object-cover rounded-lg" src="ufficio.jpg"/>
+</div>
+</div>
+<!-- Day 08 -->
+<div class="group bg-white p-6 rounded-xl border border-[#E2E8F0] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps px-2 py-1 bg-[#F1F5F9] rounded text-[#64748B]">DAY 08</span>
+<span class="material-symbols-outlined text-[#64748B]">timer_10_alt_1</span>
+</div>
+<h4 class="font-headline-md text-[22px] text-[#1E293B] mb-3">Aggiornamento Web e Database Operai</h4>
+<p class="font-body-md text-body-md text-[#475569] mb-6 flex-grow">In questa giornata ho svolto mansioni più digitali. Ho lavorato al computer per aggiornare e modificare alcune parti del sito web aziendale e ho sistemato l'archivio digitale con i dati anagrafici e professionali degli operai.</p>
+<div class="w-full h-40 rounded-lg bg-[#F1F5F9] flex items-center justify-center text-[#94A3B8]">
+<img alt="Aggiornamento Web e Database Operai" class="w-full h-full object-cover rounded-lg" src="web.avif"/>
+</div>
+</div>
+<!-- Day 09 -->
+<div class="group bg-white p-6 rounded-xl border border-[#E2E8F0] hover:shadow-xl transition-all duration-300 flex flex-col">
+<div class="flex justify-between items-start mb-6">
+<span class="font-label-caps text-label-caps px-2 py-1 bg-[#F1F5F9] rounded text-[#64748B]">DAY 09</span>
+<span class="material-symbols-outlined text-[#64748B]">verified</span>
+</div>
+<h4 class="font-headline-md text-[22px] text-[#1E293B] mb-3">Digitalizzazione Inventario</h4>
+<p class="font-body-md text-body-md text-[#475569] mb-6 flex-grow">Nell'ultimo giorno ho creato un database su Excel per catalogare tutte le attrezzature tecniche dell'azienda. Ho organizzato il foglio di calcolo inserendo ogni strumento con il rispettivo codice identificativo per facilitarne la tracciabilità.</p>
+<div class="w-full h-40 rounded-lg bg-[#F1F5F9] flex items-center justify-center text-[#94A3B8]">
+<img alt="Digitalizzazione Inventario" class="w-full h-full object-cover rounded-lg" src="inventario.avif"/>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full bg-surface-container-lowest border-t border-outline-variant/30">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 py-16 px-8 max-w-[1280px] mx-auto">
+<div class="md:col-span-4">
+<div class="font-headline-md text-headline-md font-bold text-on-surface mb-4">Ciemme Impianti</div>
+<p class="font-body-md text-body-md text-on-surface-variant max-w-xs">Eccellenza nell'ingegneria dei sistemi industriali e soluzioni termiche sostenibili dal 1998.</p>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-primary mb-6">NAVIGATION</h5>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Projects</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Expertise</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-primary font-bold" href="#">Diary</a></li>
+</ul>
+</div>
+<div class="md:col-span-2">
+<h5 class="font-label-caps text-label-caps text-primary mb-6">STANDARDS</h5>
+<ul class="flex flex-col gap-4">
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">ISO Certifications</a></li>
+<li class=""><a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary transition-colors duration-200" href="#">Technical Standards</a></li>
+</ul>
+</div>
+<div class="md:col-span-4 flex flex-col items-end">
+<h5 class="font-label-caps text-label-caps text-primary mb-6">STAY CONNECTED</h5>
+<div class="flex gap-4 mb-8">
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-full hover:bg-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">public</span>
+</a>
+<a class="w-10 h-10 flex items-center justify-center border border-outline-variant rounded-full hover:bg-surface-variant transition-all" href="#">
+<span class="material-symbols-outlined text-[20px]">mail</span>
+</a>
+</div>
+<p class="font-label-caps text-label-caps text-on-surface-variant">Eccellenza nell'ingegneria dei sistemi industriali e soluzioni termiche sostenibili dal 1998.</p>
+</div>
+</div>
+<div class="border-t border-outline-variant/10 py-8 px-8">
+<div class="max-w-[1280px] mx-auto flex flex-wrap gap-8 justify-center">
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary" href="#">Privacy Policy</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary" href="#">Terms of Service</a>
+<a class="font-label-caps text-label-caps text-on-surface-variant hover:text-secondary" href="#">Technical Standards</a>
+</div>
+</div>
+</footer>
+</body></html>

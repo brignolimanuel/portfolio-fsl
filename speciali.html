@@ -1,0 +1,254 @@
+<!DOCTYPE html><html class="dark" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Special Olympics - Technical Infrastructure Support</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#283044",
+                        "error-container": "#93000a",
+                        "inverse-surface": "#d4e4fa",
+                        "surface-container-high": "#1c2b3c",
+                        "primary-fixed": "#dae2fd",
+                        "on-tertiary": "#2d3133",
+                        "on-secondary-fixed-variant": "#004c69",
+                        "secondary-fixed": "#c4e7ff",
+                        "surface-container": "#122131",
+                        "on-background": "#d4e4fa",
+                        "background": "#051424",
+                        "outline-variant": "#45464d",
+                        "secondary-fixed-dim": "#7bd0ff",
+                        "on-secondary-container": "#00374d",
+                        "text-on-dark": "#FFFFFF",
+                        "border-glass": "rgba(255, 255, 255, 0.1)",
+                        "on-surface-variant": "#c6c6cd",
+                        "surface-container-lowest": "#010f1f",
+                        "inverse-primary": "#565e74",
+                        "surface-dim": "#051424",
+                        "tertiary-fixed-dim": "#c4c7c9",
+                        "surface-container-highest": "#273647",
+                        "on-error-container": "#ffdad6",
+                        "surface-tint": "#bec6e0",
+                        "on-tertiary-fixed": "#191c1e",
+                        "on-tertiary-fixed-variant": "#444749",
+                        "on-primary-fixed": "#131b2e",
+                        "tertiary-container": "#15181a",
+                        "surface-bright": "#2c3a4c",
+                        "on-primary-container": "#798098",
+                        "on-surface": "#d4e4fa",
+                        "on-secondary-fixed": "#001e2c",
+                        "text-on-light": "#0F172A",
+                        "tertiary-fixed": "#e0e3e5",
+                        "surface": "#051424",
+                        "outline": "#909097",
+                        "on-primary-fixed-variant": "#3f465c",
+                        "primary-fixed-dim": "#bec6e0",
+                        "primary-container": "#0f172a",
+                        "on-tertiary-container": "#7e8183",
+                        "on-error": "#690005",
+                        "surface-dark": "#1E293B",
+                        "surface-container-low": "#0d1c2d",
+                        "secondary-container": "#00a6e0",
+                        "on-secondary": "#00354a",
+                        "inverse-on-surface": "#233143",
+                        "error": "#ffb4ab",
+                        "surface-variant": "#273647",
+                        "tertiary": "#c4c7c9",
+                        "secondary": "#7bd0ff",
+                        "primary": "#bec6e0"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1280px",
+                        "gutter": "24px",
+                        "unit": "8px",
+                        "section-padding-md": "64px",
+                        "section-padding-lg": "120px"
+                    },
+                    "fontFamily": {
+                        "label-caps": ["Inter"],
+                        "display-hero": ["Playfair Display"],
+                        "headline-md": ["Playfair Display"],
+                        "body-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "technical-stat": ["Inter"],
+                        "headline-lg": ["Playfair Display"]
+                    },
+                    "fontSize": {
+                        "label-caps": ["12px", { "lineHeight": "1.2", "letterSpacing": "0.05em", "fontWeight": "600" }],
+                        "display-hero": ["72px", { "lineHeight": "1.1", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+                        "headline-md": ["32px", { "lineHeight": "1.3", "fontWeight": "600" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "technical-stat": ["40px", { "lineHeight": "1", "letterSpacing": "-0.01em", "fontWeight": "700" }],
+                        "headline-lg": ["48px", { "lineHeight": "1.2", "fontWeight": "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .glass-card {
+            backdrop-filter: blur(16px);
+            background: rgba(30, 41, 59, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased pt-16">
+<!-- TopNavBar -->
+<nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center px-gutter h-16 bg-surface/80 backdrop-blur-xl border-b border-border-glass">
+<div class="text-body-lg font-headline-md font-bold text-on-surface tracking-tight"><img alt="Special Olympics Italia" class="h-8 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugB-2VLzj-VUlGFS9z9NZsQXxRyZxEVuZFjaf6IOs-dcJNUWJwDac3teGk3neO2mVNn2TXKEx2dPIiwAy_ISXyJnwlLL_rpFbDtWFJXGdgb0y9Hnt5rcVLCAOvdLIH4Xiisgu5c0F64lVTfWyZp1cD5SGIK5J3q8nnLI5hQEtpMx-oXXmCbz4Gz364JUlDmOsI-RvibG3br4mMFroH58bDKUfFnIcppHXwoVXA-LK8J9-QaCSBv90dGB14"></div>
+<div class="hidden md:flex gap-6 items-center">
+<a class="text-on-surface-variant font-medium hover:text-primary transition-colors font-label-caps text-label-caps hover:bg-white/5 transition-all duration-300" href="#">Home<br></a>
+</div>
+<div class="flex items-center">
+<button class="bg-text-on-dark text-background font-label-caps text-label-caps px-4 py-2 rounded-DEFAULT hover:shadow-[0_0_15px_rgba(123,208,255,0.3)] transition-all">Contact Lead</button>
+</div>
+</nav>
+<main>
+<!-- Hero Section -->
+<section class="relative min-h-[819px] flex flex-col justify-end pb-section-padding-lg px-gutter max-w-container-max mx-auto border-x border-border-glass">
+<div class="absolute inset-0 z-0">
+<img alt="Technical background image" class="w-full h-full object-cover opacity-20" data-alt="A highly detailed, dimly lit industrial technical environment showing complex electrical server racks and thick cables neatly organized in trays. The scene is illuminated by cool blue and white LED lights indicating operational status, creating a modern corporate aesthetic. The overall mood is precise, engineered, and authoritative, matching a high-end data center or technical infrastructure control room in deep obsidian dark mode." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMnZGgHMQeZKFC4OJ6o04F3Sm0CF7upCCqW6oJFBCw0hSxpal0YXilq-9hvrt41kgacSySeaq8rlxLCtSfiCRWXoBziZ7QXYyjuxvKLAzPQkadyKCY9G7DMQI8DopFts82yaNR9y0Jt18FR3ZJ7C04lvEbsp7rCcsCNsx_L0AjwhJ68DDcpQr0CmWcUuj8Q6Wse83pd8m2cL8uQZIEHgVN__D0Ya9GElcCb3G1j95oytggJ00iAwwhj2eKaJTAwytNRM4Cx549JQk">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+</div>
+<div class="relative z-10 max-w-4xl">
+<p class="font-label-caps text-label-caps text-secondary mb-4 tracking-widest">Project 01 / Phase 04</p>
+<h1 class="font-display-hero text-display-hero text-text-on-dark mb-6">Special Olympics: La Missione attraverso lo Sport</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-2xl border-l-2 border-secondary pl-6">“Che io possa vincere, ma se non riuscissi, che io possa tentare con tutte le mie forze” — Giuramento dell’Atleta Special Olympics. Supportiamo 12.000 atleti attraverso programs come Unified Sports® e La scuola inclusiva.</p>
+</div>
+</section>
+<!-- Project Context Section -->
+<section class="py-section-padding-lg px-gutter max-w-container-max mx-auto border-x border-border-glass">
+<div class="grid md:grid-cols-12 gap-gutter">
+<div class="md:col-span-4">
+<h2 class="font-headline-lg text-headline-lg text-text-on-dark sticky top-24">Descrizione dell'attività:</h2>
+</div>
+<div class="md:col-span-8 glass-card rounded-lg p-6">
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Questa esperienza di PCTO è stata per me una grandissima opportunità di crescita, sia a livello personale che formativo. Ho affiancato lo staff tecnico e i tutor nelle attività di allenamento e assistenza dedicate a persone con disabilità intellettiva, vivendo da vicino i valori dell'inclusione sociale attraverso lo sport.</p>
+<div class="grid grid-cols-2 gap-6 mt-8">
+<div class="border-l border-border-glass pl-4">
+
+
+</div>
+<div class="border-l border-border-glass pl-4">
+
+
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Technical Highlights Section -->
+<section class="py-section-padding-lg px-gutter max-w-container-max mx-auto bg-surface-container-low border border-border-glass">
+<div class="mb-12">
+<h2 class="font-headline-lg text-headline-lg text-text-on-dark text-center">Technical Highlights</h2>
+</div>
+<div class="grid md:grid-cols-3 gap-6">
+<!-- Highlight 1 -->
+<div class="glass-card rounded-lg p-6 hover:border-secondary/50 transition-colors">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-high border border-border-glass flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">bolt</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-on-dark mb-4">Supporto agli allenamenti</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Ho collaborato attivamente con i tecnici per preparare gli esercizi, spiegare i percorsi atletici e aiutare gli atleti a svolgere le attività sportive in base alle loro capacità.</p>
+</div>
+<!-- Highlight 2 -->
+<div class="glass-card rounded-lg p-6 hover:border-secondary/50 transition-colors">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-high border border-border-glass flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">router</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-on-dark mb-4">Assistenza e sicurezza:</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Mi sono occupato dell'assistenza diretta dei partecipanti prima, durante e dopo la sessione di allenamento, assicurandomi che ognuno si trovasse in un ambiente sicuro, accogliente e stimolante.</p>
+</div>
+<!-- Highlight 3 -->
+<div class="glass-card rounded-lg p-6 hover:border-secondary/50 transition-colors">
+<div class="w-12 h-12 rounded-DEFAULT bg-surface-container-high border border-border-glass flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'wght' 300;">verified_user</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-text-on-dark mb-4">Inclusione e motivazione</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Oltre alla parte pratica, il mio compito principale è stato quello di creare un legame di fiducia con gli atleti. Attraverso l'ascolto, l'empatia e l'entusiasmo, ho cercato di trasmettere positività, incoraggiandoli a superare i propri limiti sempre con il sorriso e in un clima di festa.</p>
+</div>
+</div>
+</section>
+<!-- Impact Gallery Section -->
+<section class="py-section-padding-lg px-gutter max-w-container-max mx-auto border-x border-border-glass">
+<h2 class="font-headline-lg text-headline-lg text-text-on-dark mb-12">Impact Gallery</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Gallery Item 1 -->
+<div class="relative group rounded-lg overflow-hidden border border-border-glass h-80">
+<img alt="Setup Phase" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="Engineers in hard hats reviewing architectural blueprints on digital tablets in a massive empty sports stadium during twilight. The image features a cool, dark blue tone consistent with a modern corporate technical aesthetic. The lighting is precise, highlighting the reflective surfaces of the tablets and the structural steel of the stadium, conveying a mood of rigorous planning and technical authority." src="1.png">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-caps text-label-caps text-secondary mb-2">Phase 01</p>
+<h4 class="font-headline-md text-headline-md text-text-on-dark"></h4>
+</div>
+</div>
+<!-- Gallery Item 2 -->
+<div class="relative group rounded-lg overflow-hidden border border-border-glass h-80">
+<img alt="Live Operation" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A close-up of a complex network switch panel blinking with multiple blue and white activity lights in a dark server room environment. Thick, organized bundles of ethernet cables run vertically alongside the rack. The visual style is glassmorphic and minimalistic, focusing on data-rich engineered precision. The overall atmosphere feels secure, reliable, and highly technical." src="2.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-caps text-label-caps text-secondary mb-2">Phase 02</p>
+<h4 class="font-headline-md text-headline-md text-text-on-dark"></h4>
+</div>
+</div>
+<!-- Gallery Item 3 -->
+<div class="relative group rounded-lg overflow-hidden border border-border-glass h-80">
+<img alt="Live Operation Wide" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A wide angle shot of a modern, dark-themed control room with multiple large glowing monitors displaying graphs and data visualizations in bright accent blue and white colors. Operators sit at minimalist desks focused on the screens. The setting is sleek and industrial, embodying a modern corporate design system with deep dark backgrounds and high contrast data points, suggesting verified performance." src="3.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-caps text-label-caps text-secondary mb-2">Phase 03</p>
+<h4 class="font-headline-md text-headline-md text-text-on-dark"></h4>
+</div>
+</div>
+<!-- Gallery Item 4 -->
+<div class="relative group rounded-lg overflow-hidden border border-border-glass h-80">
+<img alt="Teardown" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" data-alt="A high-contrast macro photograph of industrial electrical connectors being decoupled, showing the metallic pins and heavy-duty rubber casing. The background is a deeply blurred dark technical environment. The lighting accentuates the engineered precision of the components, reflecting a technical authority aesthetic. The image conveys the meticulous and safe teardown process of temporary infrastructure." src="4.jpg">
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent opacity-80"></div>
+<div class="absolute bottom-0 left-0 p-6">
+<p class="font-label-caps text-label-caps text-secondary mb-2">Phase 04</p>
+<h4 class="font-headline-md text-headline-md text-text-on-dark"></h4>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-section-padding-md px-gutter max-w-container-max mx-auto border-x border-t border-border-glass flex justify-center">
+<a href="index.html" class="flex items-center gap-2 border border-border-glass rounded-lg px-8 py-4 bg-surface-container-highest hover:bg-surface-bright hover:border-secondary transition-all group">
+<span class="material-symbols-outlined text-on-surface-variant group-hover:text-secondary transition-colors" style="font-variation-settings: 'wght' 300;">arrow_back</span>
+<span class="font-label-caps text-label-caps text-text-on-dark">Home</span>
+</a>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full px-gutter py-12 flex flex-col md:flex-row justify-between items-center gap-6 bg-surface-container-lowest border-t border-border-glass text-on-surface font-body-md text-body-md">
+<div class="font-headline-md text-body-lg font-bold"><img alt="Special Olympics Italia" class="h-10 object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0ugB-2VLzj-VUlGFS9z9NZsQXxRyZxEVuZFjaf6IOs-dcJNUWJwDac3teGk3neO2mVNn2TXKEx2dPIiwAy_ISXyJnwlLL_rpFbDtWFJXGdgb0y9Hnt5rcVLCAOvdLIH4Xiisgu5c0F64lVTfWyZp1cD5SGIK5J3q8nnLI5hQEtpMx-oXXmCbz4Gz364JUlDmOsI-RvibG3br4mMFroH58bDKUfFnIcppHXwoVXA-LK8J9-QaCSBv90dGB14"></div>
+<div class="flex gap-6 flex-wrap justify-center font-label-caps text-label-caps text-on-surface-variant">
+<a class="hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-secondary rounded" href="#">Technical Standards</a>
+<a class="hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-secondary rounded" href="#">Privacy Protocol</a>
+<a class="hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-secondary rounded" href="#">System Architecture</a>
+<a class="hover:text-primary transition-colors focus:outline-none focus:ring-1 focus:ring-secondary rounded" href="#">Support</a>
+</div>
+<div class="text-on-surface-variant text-sm">
+            © 2024 PCTO Engineering Authority. Special Olympics Project Documentation.
+        </div>
+</footer>
+
+
+</body></html>
